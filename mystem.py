@@ -1,5 +1,5 @@
 from cffi import FFI
-from enum import IntEnum
+from enum import Enum
 from contextlib import contextmanager
 
 
@@ -43,7 +43,7 @@ int     MystemFormFlexGramNum(MystemFormHandle* form);
 """)
 mystem = ffi.dlopen("libmystem_c_binding.so")
 
-class Quality(IntEnum):
+class Quality(Enum):
 
     # Based on https://github.com/yandex/tomita-parser/blob/5a56099c7f56c23c32933d4bc3163920c7b7a6fb/src/FactExtract/Parser/lemmerlib/lemma.h#L110
 
@@ -63,7 +63,7 @@ LEMMA_QUALITY_LOOKUP_MAP = {
     name.value: name for _, name in Quality.__members__.items()
 }
 
-class Grammeme(IntEnum):
+class Grammeme(Enum):
 
     # Based on https://github.com/yandex/tomita-parser/blob/5a56099c7f56c23c32933d4bc3163920c7b7a6fb/src/library/lemmer/dictlib/yx_gram_enum.h
 
