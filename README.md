@@ -3,9 +3,13 @@ CFFI bindings to Yandex.Mystem library
 It's not well tested, so prepare yourself for hallucinations, memory leaks and so on.
 
 # Install
-
 ```bash
-# Install libmystem-c-binding.so from https://github.com/yandex/tomita-parser/releases/tag/v1.0
+# Install libmystem-c-binding.so
+$ wget https://github.com/yandex/tomita-parser/releases/download/v1.0/libmystem_c_binding.so.linux_x64.zip
+$ unzip libmystem_c_binding.so.linux_x64.zip
+$ sudo cp libmystem_c_binding.so /usr/lib/
+```
+```bash
 $ pip install mystem
 ```
 
