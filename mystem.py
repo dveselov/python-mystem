@@ -194,6 +194,9 @@ class Analyses(object):
     def __len__(self):
         return mystem.MystemAnalysesCount(self.handle)
 
+    def __getitem__(self, i):
+        return Lemma(self.handle, i)
+
     def __iter__(self):
         for i in range(len(self)):
             yield Lemma(self.handle, i)
