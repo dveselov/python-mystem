@@ -201,8 +201,8 @@ class Analyses(object):
         for i in range(len(self)):
             yield Lemma(self.handle, i)
 
-    def __close__(self):
-        return mystem.MystemDeleteAnalyses(self.handle)
+    def __del__(self):
+        mystem.MystemDeleteAnalyses(self.handle)
 
 class Lemma(object):
 
@@ -280,7 +280,7 @@ class LemmaForms(object):
         return mystem.MystemFormsCount(self.handle)
 
     def __del__(self):
-        return mystem.MystemDeleteForms(self.handle)
+        mystem.MystemDeleteForms(self.handle)
 
 class LemmaForm(object):
 
