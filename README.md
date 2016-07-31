@@ -1,4 +1,4 @@
-# python-mystem
+# python-mystem [![Build Status](https://travis-ci.org/dveselov/python-mystem.svg?branch=master)](https://travis-ci.org/dveselov/python-mystem)
 CFFI bindings to Yandex.Mystem library  
 It's not well tested, so prepare yourself for hallucinations, memory leaks and so on.
 
