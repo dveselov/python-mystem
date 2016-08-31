@@ -14,7 +14,7 @@ $ pip install mystem
 ```
 
 # Usage
-```
+```python
 from mystem import (analyze, Grammeme)
 
 text = "Иван Иванович Иванов приехал в Санкт-Петербург"
